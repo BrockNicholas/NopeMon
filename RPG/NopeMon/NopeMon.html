@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brock Sample Projects</title>
+</head>
+<body>
+
+    <center>
+        <img src="img/Header.png;" onclick="GoHome()"/>
+        <br />
+        <div>
+            <input id="Username"></input>
+            <p>Username</p>
+        </div>
+        <div>
+            <input id="Password"></input>
+            <p>Password</p>
+        </div>
+    
+        <br />
+        <div style="height: 100px;">
+            <button id="SubmitLogin" onclick="GoToBattle()">
+                Submit
+            </button>
+        </div>
+    </center>
+
+    
+    
+</body>
+
+<script>
+        var home = window.location.href.split('RPG')[0] + 'RPG/';
+        function GoHome(){
+            window.location.href = home + 'index.html';
+        }
+
+        function GoToBattle(){
+            window.location.href = home + 'NopeMon/Battle.html?user=' + document.getElementById('Username').value + '&pass=' + document.getElementById('Password').value;
+        }
+        
+    </script>
+
+</html>
