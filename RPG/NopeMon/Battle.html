@@ -11,12 +11,20 @@
     }
     p {
         font-family: 'Pixelated', Arial;
+        margin: 10px;
     }
     body {
         border-style: solid;        
     }
     table {
         width: 100%;
+        table-layout: fixed;
+    }
+    tr {
+        background-color: rgb(235,235,235);           
+    }
+    td > p {
+        margin: 0;
     }
     #BattleBox {
         
@@ -69,10 +77,11 @@
         letter-spacing: 2px;
     }  
     .move {
-        background-color: rgb(235,235,235);
-        margin: 6px;
+        
     }  
-    
+    .power {
+        
+    }
     
 </style>
 <body>
@@ -107,12 +116,12 @@
     <div id="CommandBox" >
         <table>
             <tr>
-                <td><p id="move1" class="move">Move</p></td>
-                <td><p id="move1" class="move">Move</p></td>
+                <td><p id="Move1" class="move">Move</p><p id="Power1" class="power">1</p></td>
+                <td><p id="Move2" class="move">Move</p><p id="Power2" class="power">1</p></td>
             </tr>
             <tr>                
-                <td><p id="move1" class="move">Move</p></td>
-                <td><p id="move1" class="move">Move</p></td>
+                <td><p id="Move3" class="move">Move</p><p id="Power3" class="power">1</p></td>
+                <td><p id="Move4" class="move">Regain Health</p><p id="Power4" class="power">&nbsp;</p></td>
             </tr>
         </table>
     </div>
