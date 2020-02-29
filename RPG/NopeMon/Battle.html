@@ -9,8 +9,14 @@
         font-family: Pixelated;
         src: url(../fonts/ARCADECLASSIC.TTF)
     }
+    p {
+        font-family: 'Pixelated', Arial;
+    }
     body {
         border-style: solid;        
+    }
+    table {
+        width: 100%;
     }
     #BattleBox {
         
@@ -58,11 +64,15 @@
     .player-label {
         clear: both;
     }
-    .name-label {
-        font-family: 'Pixelated', Arial;
+    .name-label {        
         font-size: 30px;
         letter-spacing: 2px;
-    }    
+    }  
+    .move {
+        background-color: rgb(235,235,235);
+        margin: 6px;
+    }  
+    
     
 </style>
 <body>
@@ -95,14 +105,21 @@
     </div>
     <br />
     <div id="CommandBox" >
-        <p>Sample two</p>
+        <table>
+            <tr>
+                <td><p id="move1" class="move">Move</p></td>
+                <td><p id="move1" class="move">Move</p></td>
+            </tr>
+            <tr>                
+                <td><p id="move1" class="move">Move</p></td>
+                <td><p id="move1" class="move">Move</p></td>
+            </tr>
+        </table>
     </div>
 </body>
 
 <script>
-    var args = document.location.search.split('?')[1].split('&');
-    var user = args[0].split('=')[1];
-    var pass = args[1].split('=')[1];
+
     
     
 </script>
