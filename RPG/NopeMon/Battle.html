@@ -9,14 +9,93 @@
         font-family: Pixelated;
         src: url(../fonts/ARCADECLASSIC.TTF)
     }
+    body {
+        border-style: solid;        
+    }
+    #BattleBox {
+        
+    }
+    #MyBox {
+        float: left;
+        width: 500px;
+        height: 500px;        
+    }
+    #MyLabel {
+        border-right: solid;
+        border-bottom: solid;        
+    }
+    #EnemyLabel {
+        border-left: solid;
+        border-bottom: solid;
+    }
+    #CommandBox {
+        border-style: double;        
+        border-color: black;
+    }
+    .nope-pic {
+        width: 300px;
+        height: 300px;
+    }
+    .spacer {
+        height: 200px !important;        
+    }
+    .right {
+        float: right;
+    }
+    .left {
+        float: left;
+    }
+    .bottom {     
+        position: absolute;   
+        bottom: 0;
+    }
+    .relative {
+        position: relative;
+    }
+    .clear {
+        clear: both;
+    }
+    .player-label {
+        clear: both;
+    }
+    .name-label {
+        font-family: 'Pixelated', Arial;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }    
+    
 </style>
 <body>
-    <div style="display: flex;">
-
-
-
-
-        <p id="TextBox" style=" font-family: 'Pixelated', Arial">Sample Text</p>
+    <br />
+    <div id="BattleBox" style="display: flex;">
+        <div id="MyBox">
+            <div class="spacer">                
+                <div id="EnemyLabel" class="player-label right">
+                    <p class="name-label">Enemy</p>
+                    <div id="EnemyHealth" class="right">* * *</div>
+            </div>
+                
+            </div>
+            <div>
+                <img src="img/NopeLogo.png" class="nope-pic" />
+            </div>
+        </div>
+        <div id="OpponentBox" class="relative" style="float: left; width: 500px; height: 500px">            
+            <div>
+                <img src="img/NopeLogo.png" class="nope-pic right" />
+            </div>
+            <div class="clear">
+                <div id="MyLabel" class="player-label bottom">
+                    <p class="name-label">Me</p>
+                    <div id="MyHealth" class="">* * *</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <br />
+    <div id="CommandBox" >
+        <p>Sample two</p>
     </div>
 </body>
 
