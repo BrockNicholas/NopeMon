@@ -39,6 +39,15 @@
     function GoToBattle(){
         window.location.href = home + 'NopeMon/Battle.html?user=' + document.getElementById('Username').value + '&pass=' + document.getElementById('Password').value;
     }
+
+    // Submit on enter key
+    var input = document.getElementById('Password');
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById('SubmitLogin').click();
+  }
+});
         
     </script>
 
