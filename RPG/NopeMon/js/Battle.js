@@ -1,4 +1,20 @@
 
+var self = this;
+/*self.MyNope = GetMyNope();
+self.EnemyNope = GetEnemyNope();
+self.WhoseTurn = GetWhoseTurn();
+self.IsNewMove = GetIsNewMove();*/
+
+// Initial load
+(function(){
+    
+    //$('#MyName').text(self.MyNope.Name);
+})()
+
+function getVal() {
+    return Math.round(Math.random() * (50 - 0)); 
+}
+
 var moveBody = $('#MoveBody');
 $('.move').click(function(){
     console.log('i was clicked');
