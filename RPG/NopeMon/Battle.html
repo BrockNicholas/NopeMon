@@ -24,6 +24,7 @@
         background-color: rgb(235,235,235);           
     }
     td > p {
+        font-size: 30px;
         margin: 0;
         margin-left: 5px;
     }
@@ -45,7 +46,7 @@
     }
     #CommandBox {
         border-style: double;        
-        border-color: black;
+        border-color: black;        
     }
     .nope-pic {
         width: 300px;
@@ -83,6 +84,9 @@
     .move:hover {
         background-color: rgb(200,200,200);
     }
+    .move:active {
+        background-color: rgb(170,170,170);
+    }
     .waiting {
         opacity: .3;
     }
@@ -95,11 +99,14 @@
     .left-pad {
         padding-left: 10px;
     }
+    .default-margin {
+        margin: 10px;
+    }
     .health-border {
         border-color: rgb(50,50,50);
         border-style: solid;
         border-width: 1px;        
-        width: 120px;
+        width: 150px;
         height: 8px;        
         margin: 10px;
     }
@@ -111,6 +118,9 @@
     }
     .turn {
         background-color: rgb(200,200,200);
+    }
+    .move-table {
+        height: 120px;
     }
 </style>
 <body>
@@ -128,12 +138,12 @@
                 
             </div>
             <div>
-                <img src="img/NopeLogo.png" class="nope-pic" />
+                <img src="img/NopeLogo.png" class="nope-pic default-margin" />
             </div>
         </div>
         <div id="OpponentBox" class="relative" style="float: left; width: 500px; height: 500px">            
             <div>
-                <img src="img/NopeLogo.png" class="nope-pic right" />
+                <img src="img/NopeLogo.png" class="nope-pic right default-margin" />
             </div>
             <div class="clear">
                 <div id="MyLabel" class="player-label bottom">
@@ -149,7 +159,7 @@
     </div>
     <br />
     <div id="CommandBox">
-        <table class="">
+        <table class="move-table">
             <tr>
                 <td class="move"><p id="Move1">Move</p><p id="Power1" class="power">1</p></td>
                 <td class="move"><p id="Move2">Move</p><p id="Power2" class="power">1</p></td>
