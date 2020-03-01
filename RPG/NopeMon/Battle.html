@@ -83,6 +83,9 @@
     .move:hover {
         background-color: rgb(200,200,200);
     }
+    .waiting {
+        opacity: .3;
+    }
     .power {
         
     }
@@ -92,14 +95,22 @@
     .left-pad {
         padding-left: 10px;
     }
-    .health-bar {
+    .health-border {
         border-color: rgb(50,50,50);
         border-style: solid;
-        border-width: 1px;
-        background-color: rgb(63,224,208);
+        border-width: 1px;        
         width: 120px;
-        padding: 4px;
+        height: 8px;        
         margin: 10px;
+    }
+    .health-bar {
+        background-color: rgb(63,224,208);
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .turn {
+        background-color: rgb(200,200,200);
     }
 </style>
 <body>
@@ -109,7 +120,9 @@
             <div class="spacer">                
                 <div id="EnemyLabel" class="player-label right">
                     <p class="name-label">Enemy</p>
-                    <div id="EnemyHealth" class="health-bar"></div>
+                    <div class="health-border">
+                        <div id="EnemyHealth" class="health-bar"></div>
+                    </div>
                     <div id="EnemyLives" class="left left-pad">* * *</div>
             </div>
                 
@@ -123,10 +136,12 @@
                 <img src="img/NopeLogo.png" class="nope-pic right" />
             </div>
             <div class="clear">
-                <div id="MyLabel" class="player-label bottom">
+                <div id="MyLabel" class="player-label bottom turn">
                     <p class="name-label">Me</p>
-                    <div id="MyHealth" class="health-bar"></div>
-                    <div id="MyLives" class="right right-pad">* * *</div>
+                    <div class="health-border">
+                        <div id="MyHealth" class="health-bar"></div>
+                    </div>
+                    <div id="MyLives" class="left left-pad">* * *</div>
                 </div>
             </div>
         </div>
@@ -134,7 +149,7 @@
     </div>
     <br />
     <div id="CommandBox">
-        <table>
+        <table class="waiting">
             <tr>
                 <td class="move"><p id="Move1">Move</p><p id="Power1" class="power">1</p></td>
                 <td class="move"><p id="Move2">Move</p><p id="Power2" class="power">1</p></td>
