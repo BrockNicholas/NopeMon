@@ -159,7 +159,7 @@
     </div>
     <br />
     <div id="CommandBox">
-        <table class="move-table">
+        <table id="MoveTable" class="move-table">
             <tr>
                 <td class="move"><p id="Move1">Move</p><p id="Power1" class="power">1</p></td>
                 <td class="move"><p id="Move2">Move</p><p id="Power2" class="power">1</p></td>
@@ -172,10 +172,31 @@
     </div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
+    $('.move').click(function(){
+        console.log('i was clicked');
+        Attack();
+    })
+
+    function Attack(){
+        HideMoves();        
+    }
+
+    function HideMoves(){        
+        var moveTable = document.getElementById('MoveTable');
+        moveTable.style.visibility = 'hidden';
+    }
+
+    function ShowMoves(){        
+        var moveTable = document.getElementById('MoveTable');
+        moveTable.style.visibility = 'visible';
+    }
     
     
+    
+
 </script>
 
 </html>
