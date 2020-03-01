@@ -77,8 +77,11 @@
         letter-spacing: 2px;
     }  
     .move {
-        
+        cursor: pointer;
     }  
+    .move:hover {
+        background-color: rgb(200,200,200);
+    }
     .power {
         
     }
@@ -116,12 +119,12 @@
     <div id="CommandBox" >
         <table>
             <tr>
-                <td><p id="Move1" class="move">Move</p><p id="Power1" class="power">1</p></td>
-                <td><p id="Move2" class="move">Move</p><p id="Power2" class="power">1</p></td>
+                <td  class="move"><p id="Move1">Move</p><p id="Power1" class="power">1</p></td>
+                <td  class="move"><p id="Move2">Move</p><p id="Power2" class="power">1</p></td>
             </tr>
             <tr>                
-                <td><p id="Move3" class="move">Move</p><p id="Power3" class="power">1</p></td>
-                <td><p id="Move4" class="move">Regain Health</p><p id="Power4" class="power">&nbsp;</p></td>
+                <td class="move"><p id="Move3">Move</p><p id="Power3" class="power">1</p></td>
+                <td class="move"><p id="Move4">Regain Health</p><p id="Power4" class="power">&nbsp;</p></td>
             </tr>
         </table>
     </div>
