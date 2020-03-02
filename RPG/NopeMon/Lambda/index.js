@@ -18,7 +18,7 @@ exports.handler = (event, context, callback) => {
       console.log(results);
       
       callback(null, {
-        statusCode: responseCode,
+        statusCode: 200,
         headers: {
           "x-custom-header" : "my custom header value"
         },
