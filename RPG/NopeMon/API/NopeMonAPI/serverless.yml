@@ -1,0 +1,19 @@
+service: nopemonapi
+app: nopemon
+org: brockcosm
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  NopeAPI:
+    handler: handler.nopeAPI
+
+#    events:
+#      - http:
+#          path: users/create
+#          method: get
+
