@@ -1,15 +1,20 @@
 
 var self = this;
 /*self.MyNope = GetMyNope();
-self.EnemyNope = GetEnemyNope();
+/*self.EnemyNope = GetEnemyNope();
 self.WhoseTurn = GetWhoseTurn();
 self.IsNewMove = GetIsNewMove();*/
 
 // Initial load
-(function(){
+(async function(){
+    var myName = await GetMyNope();
+    $('#MyName').text(myName);
     
-    //$('#MyName').text(self.MyNope.Name);
 })()
+
+function startGame() {
+
+}
 
 function getVal() {
     return Math.round(Math.random() * (50 - 0)); 
