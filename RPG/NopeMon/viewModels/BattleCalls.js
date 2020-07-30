@@ -7,15 +7,15 @@ function GetMyNope(){
 function Sender(method, path){
     return new Promise(resolve => {
 
-        var xhhtp = new XMLHttpRequest();
-        xhhtp.onreadystatechange = function(){
+        var xml = new XMLHttpRequest();
+        xml.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200) {
-                resolve(this.responseText);
+                resolve(JSON.parse(this.responseText));
             }
         };
 
-        xhhtp.open(method, pre + path, true);
-        xhhtp.send();
+        xml.open(method, pre + path, true);
+        xml.send();
 
     })
 

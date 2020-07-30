@@ -8,7 +8,8 @@ self.IsNewMove = GetIsNewMove();*/
 // Initial load
 (async function(){
     var myName = await GetMyNope();
-    $('#MyName').text(myName);
+    $('#MyName').text(myName.data[0].first_name);
+    
     
 })()
 
